@@ -1,0 +1,14 @@
+langchain
+openai
+langchain-community
+langchain-ollama
+sentence-transformers
+faiss-cpu
+chromadb
+pypdf
+tqdm
+python-dotenv
+ollama
+bert_score==0.3.13
+requests
+

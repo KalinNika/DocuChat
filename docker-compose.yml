@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  ollama:
+    image: ollama/ollama
+    container_name: ollama-1
+    ports:
+      - "8080:8080"
+    volumes:
+      - ollama_data:/root/.ollama
+    networks:
+      - ragnet
+
+  docuchat:
+    build: .
+    depends_on:
+      - ollama
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+    networks:
+      - ragnet
+
+volumes:
+  ollama_data:
+
+networks:
+  ragnet:
+    driver: bridge
