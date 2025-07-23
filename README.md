@@ -93,8 +93,5 @@ docuchat container — PDF parser, embedding generator, QA handler
 ### 🧪 Run tests:
 **python3 autotest.py**
 
----
 
-📜 License
-MIT License — free to use, modify, and distribute.
 
